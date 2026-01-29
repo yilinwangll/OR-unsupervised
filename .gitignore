@@ -1,5 +1,62 @@
-01_sft_train.sh
-02_grpo_train.sh
-wandb/
-code_reward_debug.txt
+# Python
 __pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Vim swap files
+*.swp
+*.swo
+*.swn
+
+# Wandb
+wandb/
+
+# Debug output
+*_debug.txt
+*_failed.jsonl
+
+# IDE
+.idea/
+.vscode/
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.tmp
+Compressing
+
+# Logs
+logs_v0/
+
+# EasyR1 (external dependency)
+EasyR1/
+
+# ===== Datasets: only keep SFT data =====
+# Exclude raw datasets (external git repos, very large)
+datasets/raw/
+
+# Exclude GRPO data
+datasets/grpo/
+
+# Exclude intermediate processing data
+datasets/intermediate/
+
+# Exclude other training data
+datasets/other/
+
+# Exclude eval results
+datasets/eval_results/
+
+# SFT data: only keep the currently used dataset
+datasets/sft/*
+!datasets/sft/sft_final_4k_0126.json
+
+# Eval embedded git repos
+eval/StructuredOR/
